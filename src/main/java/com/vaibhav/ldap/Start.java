@@ -11,7 +11,7 @@ public class Start {
 	public static void main(String[] args) throws Exception{
 
 		LdapConnection connection = new LdapNetworkConnection( "localhost", 389 );
-		connection.bind( "cn=user-name ou=serviceaccounts, dc=ddc dc =net", "password" );
+		connection.bind( "cn=user-name ou=serviceaccounts, dc=ddc dc=net", "password" );
 		EntryCursor cursor = connection.search( "DC=DDC DC=net","sAMAccount=userIDtoSearch", SearchScope.SUBTREE,
 				"*" );
 
